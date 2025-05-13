@@ -85,7 +85,7 @@ const EmergencyForm = ({ isOpen, onClose }) => {
     console.log("Sending data:", payload); // 🔍 Debugging log
   
     try {
-      const response = await axios.post("http://localhost:5000/api/emergency", payload, {
+      const response = await axios.post("https://backend-l7fu.onrender.com/api/emergency", payload, {
         headers: {
           "Content-Type": "application/json",
         },
