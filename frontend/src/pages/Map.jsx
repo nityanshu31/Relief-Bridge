@@ -11,7 +11,7 @@ const Map = () => {
 
   const fetchIncidents = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/incidents");
+      const res = await axios.get("https://backend-l7fu.onrender.com/api/incidents");
       setIncidents(res.data);
     } catch (error) {
       console.error("Error fetching incidents:", error);
