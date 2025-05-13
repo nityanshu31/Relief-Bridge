@@ -66,7 +66,7 @@ const EditProfile = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/edit-profile", {
+      const response = await fetch("https://backend-l7fu.onrender.com/api/auth/edit-profile", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
