@@ -37,7 +37,7 @@ const Register = () => {
     setIsLoading(true);
     setError('');
 
-    const apiUrl = 'http://localhost:5000/api/auth/register';
+    const apiUrl = 'https://backend-l7fu.onrender.com/api/auth/register';
     const userData = { name, phone, password, role };
 
     try {
