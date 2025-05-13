@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { PlusCircle, Users, Building2, Trash2 } from "lucide-react";
 import axios from "axios"; // Import axios
 
-const API_BASE_URL = "http://localhost:5000"; // Adjust based on your backend
+const API_BASE_URL = "https://backend-l7fu.onrender.com"; // Adjust based on your backend
 
 const RoomandGuest = () => {
   const [rooms, setRooms] = useState([]);
