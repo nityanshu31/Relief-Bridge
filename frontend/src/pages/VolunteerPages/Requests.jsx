@@ -10,7 +10,7 @@ const Requests = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/emergency");
+        const response = await axios.get("https://backend-l7fu.onrender.com/api/emergency");
         setRequests(response.data);
       } catch (err) {
         setError("Failed to fetch requests.");
