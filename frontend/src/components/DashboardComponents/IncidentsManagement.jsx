@@ -8,7 +8,7 @@ const IncidentsManagement = () => {
   useEffect(() => {
     const fetchIncidents = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/incidents");
+        const response = await fetch("https://backend-l7fu.onrender.com/api/incidents");
         if (!response.ok) {
           throw new Error("Failed to fetch incidents");
         }
@@ -31,7 +31,7 @@ const IncidentsManagement = () => {
   const handleMarkSolved = async (id) => {
     try {
       // Send PUT request to backend to mark the incident as solved
-      await fetch(`http://localhost:5000/api/incidents/${id}`, {
+      await fetch(`https://backend-l7fu.onrender.com/api/incidents/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ solved: true }),
