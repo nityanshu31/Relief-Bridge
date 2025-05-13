@@ -12,8 +12,8 @@ const Overview = () => {
       try {
         // Fetch both incidents and emergencies
         const [incidentsRes, emergenciesRes] = await Promise.all([
-          axios.get("http://localhost:5000/api/incidents"),
-          axios.get("http://localhost:5000/api/emergency"),
+          axios.get("https://backend-l7fu.onrender.com/api/incidents"),
+          axios.get("https://backend-l7fu.onrender.com/api/emergency"),
         ]);
 
         setIncidents(incidentsRes.data);
