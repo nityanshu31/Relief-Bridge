@@ -92,7 +92,7 @@ const IncidentReport = () => {
     const incidentData = { title, description, type, location };
 
     try {
-      await axios.post("http://localhost:5000/api/incidents", incidentData);
+      await axios.post("https://backend-l7fu.onrender.com/api/incidents", incidentData);
       alert("Incident reported successfully!");
       setTitle("");
       setDescription("");
