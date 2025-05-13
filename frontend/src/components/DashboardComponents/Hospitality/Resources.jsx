@@ -14,7 +14,7 @@ const Resources = () => {
 
   const fetchResources = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/resources");
+      const response = await axios.get("https://backend-l7fu.onrender.com/resources");
       setResources(response.data);
     } catch (error) {
       console.error("Error fetching resources:", error);
@@ -30,7 +30,7 @@ const Resources = () => {
   const addResource = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/resources", newResource);
+      await axios.post("https://backend-l7fu.onrender.com/resources", newResource);
       fetchResources();
       setNewResource({ name: "", category: "Essentials", stock: "", threshold: "" });
     } catch (error) {
@@ -41,7 +41,7 @@ const Resources = () => {
   const allocateResource = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/resources/${allocation.resourceId}/allocate`, { allocatedTo: allocation.user });
+      await axios.put(`https://backend-l7fu.onrender.com/resources/${allocation.resourceId}/allocate`, { allocatedTo: allocation.user });
       fetchResources();
       setAllocation({ resourceId: "", user: "" });
     } catch (error) {
