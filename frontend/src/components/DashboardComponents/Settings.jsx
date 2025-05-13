@@ -16,7 +16,7 @@ const Settings = () => {
   useEffect(() => {
     const fetchEmergencyData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/emergency");
+        const response = await axios.get("https://backend-l7fu.onrender.com/api/emergency");
         const emergenciesList = response.data;
 
         const stats = {
