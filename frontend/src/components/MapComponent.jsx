@@ -66,7 +66,7 @@ const MapComponent = () => {
   // Fetch incidents and display them on the map
   const fetchIncidents = async (mapInstance, ui) => {
     try {
-      const response = await fetch('http://localhost:5000/api/incidents'); // Replace with actual API URL
+      const response = await fetch('https://backend-l7fu.onrender.com/api/incidents'); // Replace with actual API URL
       const data = await response.json();
       setIncidents(data);
 
