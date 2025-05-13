@@ -118,7 +118,7 @@ const Login = ({ onLogin }) => {
     setIsLoading(true);
     setError('');
 
-    const apiUrl = 'http://localhost:5000/api/auth/login';
+    const apiUrl = 'https://backend-l7fu.onrender.com/api/auth/login';
 
     try {
       const response = await fetch(apiUrl, {
